@@ -1,0 +1,21 @@
+{
+  "name": "sotprog",
+  "version": "1.0.0",
+  "description": "Systems of Things - Programming Model",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=img/sot.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . sotprog --overwrite --asar=true --platform=win32 --arch=ia32 --icon=img/sot.ico --prune=true --out=release-builds --version-string.CompanyName=SOT --version-string.FileDescription=CE --version-string.ProductName=\"Systems of Things - Programming Model\"",
+    "package-linux": "electron-packager . sotprog --overwrite --asar=true --platform=linux --arch=x64 --icon=img/sot.png --prune=true --out=release-builds"
+  },
+  "author": "High Exalted Grand Poo-Bah",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^2.0.2"
+  },
+  "build": {
+    "appId": "com.electron.{$name}"
+  }
+}
